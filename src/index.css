@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 220 35% 14%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 35% 14%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 35% 14%;
+    --primary: 24 95% 53%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 220 35% 14%;
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+    --accent: 24 95% 53%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 24 95% 53%;
+    --radius: 0.75rem;
+    
+    /* Brandio Official Colors */
+    --brand-navy: #111827;
+    --brand-orange: #F97316;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-white text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+}
+
+/* Typography */
+.font-display {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+/* Brand Colors */
+.text-brand-navy {
+  color: #111827;
+}
+
+.text-brand-orange {
+  color: #F97316;
+}
+
+.bg-brand-navy {
+  background-color: #111827;
+}
+
+.bg-brand-orange {
+  background-color: #F97316;
+}
+
+.border-brand-orange {
+  border-color: #F97316;
+}
+
+/* Button Styles */
+.btn-primary {
+  @apply px-6 py-3.5 bg-[#F97316] text-white font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-2;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(249, 115, 22, 0.5);
+}
+
+.btn-secondary {
+  @apply px-6 py-3.5 border-2 border-[#111827] text-[#111827] font-semibold rounded-xl transition-all duration-300 inline-flex items-center gap-2;
+}
+
+.btn-secondary:hover {
+  @apply bg-[#111827] text-white;
+}
+
+/* Section Styles */
+.section-padding {
+  @apply py-16 md:py-24;
+}
+
+.container-padding {
+  @apply px-5 md:px-8 lg:px-16;
+}
+
+/* Hero Title with Orange Dot */
+.hero-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  color: #111827;
+}
+
+.hero-title-dot {
+  display: inline-block;
+  width: 0.35em;
+  height: 0.35em;
+  background-color: #F97316;
+  border-radius: 50%;
+  margin-left: 0.05em;
+  vertical-align: baseline;
+}
+
+/* Tag Style */
+.tag {
+  @apply inline-flex items-center px-4 py-2 rounded-full text-sm font-medium;
+  background-color: rgba(249, 115, 22, 0.1);
+  color: #F97316;
+}
+
+.tag-dot {
+  width: 8px;
+  height: 8px;
+  background-color: #F97316;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+/* Stats Counter */
+.stat-number {
+  font-size: clamp(4rem, 18vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #F97316;
+  display: inline-block;
+  min-width: 2ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.stat-percent {
+  font-size: clamp(4rem, 18vw, 10rem);
+  font-weight: 800;
+  line-height: 1;
+  color: #F97316;
+  display: inline-block;
+}
+
+/* Card Styles */
+.card-hover {
+  @apply transition-all duration-300;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.1);
+}
+
+/* Feature List */
+.feature-list li {
+  @apply flex items-start gap-3 py-2;
+}
+
+.feature-list li::before {
+  content: '✓';
+  @apply font-bold flex-shrink-0;
+  color: #F97316;
+}
+
+/* Pricing Card */
+.pricing-card {
+  @apply bg-white rounded-2xl p-6 md:p-8 border border-gray-100 transition-all duration-300;
+}
+
+.pricing-card:hover {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+}
+
+.pricing-card.featured {
+  @apply border-[#F97316]/30;
+  background: linear-gradient(180deg, rgba(249, 115, 22, 0.05) 0%, #fff 100%);
+  box-shadow: 0 25px 50px -12px rgba(249, 115, 22, 0.12);
+}
+
+/* Divider */
+.divider {
+  @apply w-16 h-1 rounded-full;
+  background-color: #F97316;
+}
+
+/* Navigation */
+.nav-blur {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Image Styles */
+.img-rounded {
+  @apply rounded-2xl overflow-hidden;
+}
+
+.img-shadow {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #aaa;
+}
+
+/* Selection */
+::selection {
+  background-color: #F97316;
+  color: white;
+}
+
+/* Mobile Optimizations */
+@media (max-width: 768px) {
+  .font-display {
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .hero-title {
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+  }
+  
+  .stat-number {
+    font-size: clamp(4rem, 20vw, 6rem);
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  html {
+    scroll-behavior: auto;
+  }
+}

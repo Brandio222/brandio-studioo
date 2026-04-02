@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+Sitemap: https://yzm32j7js7rpu.ok.kimi.link/sitemap.xml
+
+# Crawl-delay for bots
+Crawl-delay: 5
