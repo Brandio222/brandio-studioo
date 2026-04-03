@@ -118,7 +118,7 @@ const translations = {
       email: 'contact@brandio-studio.com',
       location: 'Bruxelles'
     },
-    footer: '© 2024 Brandio Studio'
+    footer: `© ${new Date().getFullYear()} Brandio Studio`
   },
   en: {
     nav: { services: 'Services', business: 'Business', pricing: 'Packs', contact: 'Contact' },
@@ -211,7 +211,7 @@ const translations = {
       email: 'contact@brandio-studio.com',
       location: 'Brussels'
     },
-    footer: '© 2024 Brandio Studio'
+    footer: `© ${new Date().getFullYear()} Brandio Studio`
   },
   nl: {
     nav: { services: 'Diensten', business: 'Business', pricing: 'Pakketten', contact: 'Contact' },
@@ -304,7 +304,7 @@ const translations = {
       email: 'contact@brandio-studio.com',
       location: 'Brussel'
     },
-    footer: '© 2024 Brandio Studio'
+    footer: `© ${new Date().getFullYear()} Brandio Studio`
   }
 };
 
