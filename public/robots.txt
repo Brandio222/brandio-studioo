@@ -1,9 +1,15 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
-Disallow: /private/
+Disallow: /src/
+Disallow: /node_modules/
 
-Sitemap: https://yzm32j7js7rpu.ok.kimi.link/sitemap.xml
+# AI crawlers welcome
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
-# Crawl-delay for bots
-Crawl-delay: 5
+Sitemap: https://brandio-studio.com/sitemap.xml
+Host: https://brandio-studio.com
