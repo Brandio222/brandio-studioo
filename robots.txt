@@ -1,4 +1,15 @@
 User-agent: *
 Allow: /
+Disallow: /src/
+Disallow: /node_modules/
+
+# AI crawlers welcome
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
 
 Sitemap: https://brandio-studio.com/sitemap.xml
+Host: https://brandio-studio.com
